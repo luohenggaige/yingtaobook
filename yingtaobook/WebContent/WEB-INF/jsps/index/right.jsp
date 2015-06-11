@@ -6,6 +6,7 @@
 <html>
 	<head>
 		<title>Insert title here</title>
+		<base target="body"/>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
 		<style>
 		
@@ -33,7 +34,7 @@
 	<body>
 		
 		<div bgcolor="" align="left" >
-			<a href="${path}/share/toAddShare.do">我的分享</a>
+			<a href="${path}/share/toListShare.do">我的分享</a>
 		</div>
 		<div bgcolor="" align="left" >
 			<a href="">我的藏书</a>

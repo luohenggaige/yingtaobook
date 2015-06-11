@@ -4,12 +4,12 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
 	<!-- struts-menu菜单web配置：为随服务器启动而启动 -->
-	<listener>
+	<!-- <listener>
 		<listener-class>net.sf.navigator.menu.MenuContextListener</listener-class>
-	</listener>
+	</listener> -->
 	
 	<!-- 父菜单格局的装饰器实现的配置 -->
-	<filter>  
+	<!-- <filter>  
 		<filter-name>sitemesh</filter-name>
 		<filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
 	</filter>
@@ -24,7 +24,7 @@
 		<url-pattern>*.jsp</url-pattern>
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
-	</filter-mapping>
+	</filter-mapping> -->
 
 	<!-- 加载spring，classpath:表示resources文件夹 -->
 	<listener>

@@ -12,13 +12,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table class="table" align="center" action="">
-		<input type="text" id="bookName" name="bookName" ></input>
-		<input type="text" id="author" name="author" ></input>
-		<input type="text" id="reason" name="reason" ></input>
-		<input type="text" id="imgSize" name="imgSize" ></input>
-		<input type="submit">保存</input>
-	</table>
+	<form id="form" action="${path}/share/addShare.do" class="table" method="post" enctype="multipart/form-data">
+		图书名称：<input type="text" id="bookName" name="bookName" ></input><br/>
+		图书图片：<input type="file" id="imgSize" name="imgSize" ></input><br/>
+		图书作者：<input type="text" id="author" name="author" ></input><br/>
+		分享理由：<input type="text" id="reason" name="reason" ></input><br/>
+		图书分类：<select style="width: 150px; height: 20px;" name="cid">
+    			</select><br/>
+		<input type="submit" value="保存"></input>
+	</form>
 	
 </body>
 </html>

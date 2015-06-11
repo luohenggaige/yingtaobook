@@ -3,46 +3,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+<base target="body"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 	*{
-			font-size:10pt;
+			font-size:11pt;
 		}
-	body{
-		text-align:center;
+	.input_tf{
+		display:block;/* 想设置input或a在页面中的位置，input或a标签是行内元素，先dispaly：block作为块级元素；然后再margin设置外边距即可 */
+		margin:20px 30px 0px 0px;
 	}
-	.table{
-		width:80%; 
-		height:100%;
-		border:1px solid gray;/*固定边框,1像素*/
-	    border-collapse: collapse;/*单线的列表边框*/
-	} 
-	.table td{
-		border:1px solid gray;/*固定边框,1像素*/
-	}  
-	iframe {
-		width: 100%;
-		height: 100%;
+	div{float:right}
+	a{
+		align:right;
+		text-transform:none;
+		text-decoration:none;
+		margin: 0px 0px 20px 20px;/* 四个外边距：从上外边距开始顺时针旋转 */
+	}
+	a:hover {/* a:hover指的是鼠标经过它时候的效果 */
+		text-decoration:underline;/* underline定义文本下的一条线。 */
 	}
 </style>
 <title>Insert title here</title>
 </head>
 <body>
-
-	<div class="frameL"><div class="menu icon">
-	    <jsp:include page="/${system}/common/itemmenu.jsp"/>
-	</div></div>
-	
 	<div>
 		<div>
-			
+			<a class="input_tf" href="${path }/share/toAddShare.do">添加分享</a>
 		</div>
 		
 		<div>
-			<c:forEach items="" var="">
+			<%-- <c:forEach items="" var="">
 				<div> 
 				</div>
-			</c:forEach>
+			</c:forEach> --%>
 		</div>
 	</div>
 	

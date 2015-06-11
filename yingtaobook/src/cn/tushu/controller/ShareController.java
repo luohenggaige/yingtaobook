@@ -13,11 +13,14 @@ public class ShareController {
 	@Autowired
 	ShareService shareService;
 	
+	@RequestMapping("/toListShare.do")
+	public String toListShare(){
+		return "share/listShare";
+	}
+	
 	@RequestMapping("/toAddShare.do")
 	public String toBookList(){
 		return "share/addShare";
 	}
-	
-	
 	
 }

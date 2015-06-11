@@ -48,7 +48,9 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient-cache-4.3.3.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/artifacts.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/content.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts-menu-2.4.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts-menu-2.4.3.jar" sourcepath="E:/shoprepository/repository/struts-menu/struts-menu/2.4.3/struts-menu-2.4.3-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sitemesh-2.4.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jersey-client-1.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
