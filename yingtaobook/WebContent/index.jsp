@@ -11,7 +11,7 @@
 			border:1px solid gray;/*固定边框,1像素*/
 		    border-collapse: collapse;/*单线的列表边框*/
 		}
-	iframe {           
+	iframe {
 			width: 100%;
 			height: 100%;
 		}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MenuConfig>
+	<Displayers><!-- 定义菜单横竖：Velocity横版 -->
+		<Displayer name="Velocity" type="net.sf.navigator.displayer.VelocityMenuDisplayer"/>
+	</Displayers>
+	<Menus>
+		<!-- 菜单主配置：在此只定义管理，不使用（类似maven依赖包管理） -->
+        <Menu name="MainMenu" title="首页" page="/shop/mainMenu.jsp" />
+        <Menu name="ItemMgmtMenu" title="商品管理" page="/brand/index.do" />
+        <Menu name="ItemMgmtMenu" title="商品管理" page="/brand/index.do" />
+      
+	</Menus>
+</MenuConfig>
