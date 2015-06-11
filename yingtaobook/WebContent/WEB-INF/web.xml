@@ -9,7 +9,7 @@
 	</listener>
 	
 	<!-- 父菜单格局的装饰器实现的配置 -->
-	<filter>
+	<filter>  
 		<filter-name>sitemesh</filter-name>
 		<filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
 	</filter>
