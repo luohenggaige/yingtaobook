@@ -1,1 +1,10 @@
 /cn
+/beans.xml
+/cssHorizontalMenu.vm
+/cssVerticalMenu.vm
+/decorators.xml
+/log4j.properties
+/springmvc.xml
+/sql
+/sqlMapConfig.xml
+/sqlMapGenerator.xml

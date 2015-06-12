@@ -11,7 +11,7 @@
 		}
 	.input_tf{
 		display:block;/* 想设置input或a在页面中的位置，input或a标签是行内元素，先dispaly：block作为块级元素；然后再margin设置外边距即可 */
-		margin:20px 30px 0px 0px;
+		margin:40px 70px 0px 0px;
 	}
 	div{float:right}
 	a{

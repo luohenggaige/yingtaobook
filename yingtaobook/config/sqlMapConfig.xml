@@ -9,6 +9,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</typeAliases> -->
 	<mappers>
 		<mapper resource="sql/mapper/UserMapper.xml"/>
+		<mapper resource="sql/mapper/BookMapper.xml"/>
+		<mapper resource="sql/mapper/ShareMapper.xml"/>
 	</mappers>
 
 </configuration>

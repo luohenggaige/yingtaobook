@@ -12,7 +12,7 @@
 		text-align:center;
 	}
 	.table{
-		width:80%;
+		width:90%;
 		height:100%;
 		border:1px solid gray;/*固定边框,1像素*/
 	    border-collapse: collapse;/*单线的列表边框*/
