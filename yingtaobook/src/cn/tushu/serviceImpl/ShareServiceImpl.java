@@ -1,6 +1,8 @@
 package cn.tushu.serviceImpl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,7 +34,7 @@ public class ShareServiceImpl implements ShareService {
 
 	@Override
 	public List<Share> selectByAll() {
-		return null;
+		return ShareDao.selectByAll();
 	}
 
 	@Override
@@ -40,5 +42,20 @@ public class ShareServiceImpl implements ShareService {
 		return null;
 	}
 
+	@Override
+	public List<Share> selectByAllHeat() {
+		return ShareDao.selectByAllHeat();
+	}
+
+	@Override
+	public List<Share> CateSelectAllDate(Map<String, Object> map) {
+		return ShareDao.CateSelectAllDate(map);
+	}
+
+	@Override
+	public List<Share> CateSelectAllHeat(Map<String, Object> map) {
+		return ShareDao.CateSelectAllHeat(map);
+	}
+	
 	
 }

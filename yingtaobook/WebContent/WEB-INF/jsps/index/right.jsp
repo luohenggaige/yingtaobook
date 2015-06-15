@@ -34,7 +34,7 @@
 	<body>
 		
 		<div bgcolor="" align="left" >
-			<a href="${path}/share/toListShare.do">我的分享</a>
+			<a href="${path}/share/myListShare.do">我的分享</a>
 		</div>
 		<div bgcolor="" align="left" >
 			<a href="">我的藏书</a>

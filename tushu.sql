@@ -34,6 +34,40 @@ CREATE TABLE `book` (
 
 insert  into `book`(`bookId`,`bookname`,`stock`,`author`,`price`,`imgSize`) values (1,NULL,NULL,NULL,NULL,NULL);
 
+/*Table structure for table `category` */
+
+DROP TABLE IF EXISTS `category`;
+
+CREATE TABLE `category` (
+  `cid` int(11) NOT NULL AUTO_INCREMENT,
+  `cname` char(50) DEFAULT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `category` */
+
+insert  into `category`(`cid`,`cname`) values (1,'文学类'),(2,'小说类');
+
+/*Table structure for table `colltrade` */
+
+DROP TABLE IF EXISTS `colltrade`;
+
+CREATE TABLE `colltrade` (
+  `collid` int(11) NOT NULL,
+  `bookname` varchar(21) DEFAULT NULL,
+  `author` varchar(21) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `userid` int(11) DEFAULT NULL,
+  `cid` int(11) DEFAULT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `imgsize` varchar(51) DEFAULT NULL,
+  PRIMARY KEY (`collid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `colltrade` */
+
+insert  into `colltrade`(`collid`,`bookname`,`author`,`price`,`userid`,`cid`,`date`,`imgsize`) values (1,'123','123',123,123,1123,'2015-06-15 20:21:40',NULL);
+
 /*Table structure for table `share` */
 
 DROP TABLE IF EXISTS `share`;
@@ -46,10 +80,14 @@ CREATE TABLE `share` (
   `reason` char(254) DEFAULT NULL,
   `imgSize` char(128) DEFAULT NULL,
   `cid` int(11) DEFAULT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `heat` int(11) DEFAULT NULL,
   PRIMARY KEY (`shareId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 /*Data for the table `share` */
+
+insert  into `share`(`shareId`,`userId`,`bookName`,`author`,`reason`,`imgSize`,`cid`,`date`,`heat`) values (5,NULL,'你我','你我','你我','upload/20150615100253275851.jpg',1,'2015-06-15 14:36:30',62),(6,NULL,'java_jy','java_jy','java_jy','upload/20150615101440540673.jpg',1,'2015-06-15 14:36:30',27),(7,NULL,'hibernate','hibernate','hibernate','upload/20150615104446872583.jpg',1,'2015-06-15 14:36:31',48),(8,NULL,'java_head','java_head','java_head','upload/20150615104525393825.jpg',2,'2015-06-15 14:36:32',138),(9,NULL,'java编程思想','java编程思想','java编程思想','upload/20150615104545087300.jpg',2,'2015-06-15 14:36:33',52),(10,NULL,'spring','spring','spring','upload/20150615104620903124.jpg',2,'2015-06-15 14:36:36',23);
 
 /*Table structure for table `user` */
 

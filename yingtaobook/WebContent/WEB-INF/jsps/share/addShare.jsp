@@ -11,36 +11,27 @@
 </style>
 <title>Insert title here</title>
 
-<script type="text/javascript" src="<c:url value='/res/js/jquery.form.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/res/js/jquery-1.8.3.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/res/js/jquery.form.js'/>"></script>
 <script type="text/javascript">
 
 function submitUpload(){
-	alert("456");
 	var option = {
-			url:"${path}/upload/upload.do",//如果ajax提交表单，那标签中的路径被覆盖
-			type:"post",
-			dataType:"text",
-			data:{
-				file:"imgsFile"
-			},
-			success:function(responseText){//上传成功后，填充小框展示
-				alert("123");
-				var obj = $.parseJSON(responseText);
-				//$("#imgsImgSrc").attr("src",obj.filePath);//先拿到元素，再填充里面的属性
-				$("#imgSize").val(obj.ralPath);//把图片相对路径放入隐藏域(以防换主机造成图片数据失效所以不用绝对路径)
-			},
-			error:function(){
-				alert("error");
-			}
+		url:"${path}/upload/upload.do",//如果ajax提交表单，那标签中的路径被覆盖
+		type:"post",
+		dataType:"text",
+		data:{
+			file:"imgsFile"
+		},
+		success:function(responseText){//上传成功后，填充小框展示
+			var obj = $.parseJSON(responseText);
+			//$("#imgsImgSrc").attr("src",obj.filePath);//先拿到元素，再填充里面的属性
+			$("#imgSize").val(obj.ralPath);//把图片相对路径放入隐藏域(以防换主机造成图片数据失效所以不用绝对路径)
+		},
+		error:function(){
+		}
 	};
-	alert("789");
 	$("#form11").ajaxSubmit(option);
-	//$.ajax(option);
-	alert("qwe");
-}
-function asdf(){
-	alert("123");
 }
 </script>
 
@@ -55,7 +46,7 @@ function asdf(){
 		分享理由：<input type="text" id="reason" name="reason" ></input><br/>
 		图书分类：<select style="width: 150px; height: 20px;" name="cid">
     			</select><br/>
-		<input type="submit" id="submit" name="button1" value="保存"></input>
+		<input type="submit" id="submit11" name="submit11" value="保存"></input>
 	</form>
 	
 </body>

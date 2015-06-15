@@ -5,13 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
+<base target="body"/>
 </head>
 <style>
 	div_top{
 		font-size: 10pt;/* 字体在样式中定义无效，在属性中定义有效 */
 	}
 	a{
-		align:right;
 		text-transform:none;
 		text-decoration:none;
 		float: right;
@@ -24,9 +24,9 @@
 <body>
 	<h1 style="text-align: center;">樱桃图书社区</h1>
 	<div height="48px" style="font-size: 11pt;">
-		<a class="a" href="">首页</a>
-		<a class="a" href="">藏书交易</a>
-		<a class="a" href="">好书分享</a>
+		<a href="${path}/index/toBody.do">首页</a>
+		<a href="${path}/Colltrade/toCollTradeList.do">藏书交易</a>
+		<a href="${path }/share/CateSelectAllDate.do?cid=1">好书分享</a>
 	</div>
 	
 </body>

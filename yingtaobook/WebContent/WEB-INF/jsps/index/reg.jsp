@@ -2,8 +2,8 @@
 <%@ include file="../common/taglibs.jsp"%>
 <head>
 <title>Insert title here</title>
-<script type="text/javascript" src="<c:url value='/res/js/jquery.form.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/res/js/jquery-1.8.3.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/res/js/jquery.form.js'/>"></script>
 <script type="text/javascript">
 $(function(){
 	$("#myForm").submit(function(){

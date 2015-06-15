@@ -3,8 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+<base target="body"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
 <style type="text/css">
 	*{
 			font-size:11pt;
@@ -21,20 +21,22 @@
 	.clear {
 	 	clear: both;
 	 }
+	.a_tf{
+		display:block;/* 想设置input或a在页面中的位置，input或a标签是行内元素，先dispaly：block作为块级元素；然后再margin设置外边距即可 */
+		margin:40px 70px 0px 0px;
+	}
 	.div_list{width:140px;height:170px;border:solid 2px gray;
 		margin-top:20px;margin-right:30px;text-align:center;text-indent:-18px;
 		float:right;}
-	.div_fxyq{float:right;margin-top:20px;margin-right:45px;}
-	.div_csyq{float:right;margin-top:40px;margin-right:45px;}
 </style>
+<title>Insert title here</title>
 </head>
 <body>
-	<div class="div_fxyq">
-		<a href="">最新分享</a>
-		<a href="">最热分享</a>
-	</div>
-	<div class="clear"></div>
-	<div style="">
+	<div>
+		<div style="float:right;">
+			<a class="a_tf" href="${path }/share/toAddShare.do">添加分享</a>
+		</div>
+		<div class="clear"></div>
 		<c:forEach items="${shareList }" var="share">
 			<div class="div_list">
 				<a href=""><img src="${path }/${share.imgsize }"></a><br>
@@ -42,20 +44,7 @@
 			</div>
 		</c:forEach>
 	</div>
-	<div class="clear"></div>
-	<div class="div_csyq">
-		<a href="">最新藏书交易</a>
-		<a href="">所有藏书交易</a>
-	</div>
-	<div class="clear"></div>
-	<div>
-		<c:forEach items="${heatList }" var="heat">
-			<div class="div_list">
-				<a href=""><img src="${path }/${heat.imgsize }"></a><br>
-				<a href="" style="text-indent:-18px;align:center;">${heat.bookname }</a>
-			</div>
-		</c:forEach>
-	</div>
+	
 	
 	
 </body>

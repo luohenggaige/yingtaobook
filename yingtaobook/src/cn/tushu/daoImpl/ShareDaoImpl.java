@@ -1,6 +1,8 @@
 package cn.tushu.daoImpl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -29,12 +31,27 @@ public class ShareDaoImpl extends SqlSessionDaoSupport implements ShareDao {
 
 	@Override
 	public List<Share> selectByAll() {
-		return null;
+		return this.getSqlSession().selectList(sn+"selectByAll");
 	}
 
 	@Override
 	public Share selectById(Integer ShareId) {
 		return null;
+	}
+
+	@Override
+	public List<Share> selectByAllHeat() {
+		return this.getSqlSession().selectList(sn+"selectByAllHeat");
+	}
+
+	@Override
+	public List<Share> CateSelectAllDate(Map<String, Object> map) {
+		return this.getSqlSession().selectList(sn+"CateSelectAllDate",map);
+	}
+
+	@Override
+	public List<Share> CateSelectAllHeat(Map<String, Object> map) {
+		return this.getSqlSession().selectList(sn+"CateSelectAllHeat",map);
 	}
 
 }
