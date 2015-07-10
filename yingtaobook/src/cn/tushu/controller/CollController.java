@@ -17,11 +17,29 @@ public class CollController {
 	@Autowired
 	ColltradeService ColltradeService;
 	
-	@RequestMapping("/toCollTradeList.do")
+	@RequestMapping("/CollTradeList.do")
 	public String toCollTradeList(Model model){
-//		List<Colltrade> list = ColltradeService.selectByAll();
-//		model.addAttribute("ColltradeList", list);
+		List<Colltrade> list = ColltradeService.selectByAll();
+		model.addAttribute("ctList", list);
 		return "colltrade/colltradelist";
+	}
+	
+	@RequestMapping("/myCollTrade.do")
+	public String myCollTrade(Model model,Integer uid){
+		List<Colltrade> list = ColltradeService.selectByAll();
+		model.addAttribute("mctList", list);
+		return "colltrade/mycolltrade";
+	}
+	
+	@RequestMapping("/toAddColl.do")
+	public String toAddColl(){
+		return "colltrade/addcoll";
+	}
+	
+	@RequestMapping("/AddColl.do")
+	public String AddColl(Model model,Colltrade colltrade){
+		ColltradeService.insert(colltrade);
+		return "redirect:myCollTrade.do";
 	}
 	
 	

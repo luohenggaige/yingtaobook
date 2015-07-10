@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
 <style type="text/css">
 	*{
 			font-size:10pt;
@@ -14,7 +15,7 @@
 	.table{
 		width:90%;
 		height:100%;
-		border:1px solid gray;/*固定边框,1像素*/
+		border:1px solid gray;/*：边框宽度 	类型		颜色*/
 	    border-collapse: collapse;/*单线的列表边框*/
 	}
 	.table td{
@@ -25,10 +26,26 @@
 		height: 100%;
 	}
 </style>
-<title>Insert title here</title>
+<script type="text/javascript" src="<c:url value='/res/js/jquery-1.8.3.js'/>"></script>
+<script type="text/javascript">
+$(function(){
+	var exisuser = $("#exisuser").val();
+	if(exisuser == "" || exisuser == null){
+		//alert($("#exisuser").val());
+		//$("#exisuser").attr("value","y");
+		//window.location.reload();//刷新当前页面.
+		//$("#exisuser").val("y");
+		//alert($("#exisuser").val());
+	}
+	//alert("123"+$("#exisuser").val());
+});
+
+
+</script>
 </head>
 <body>
 	<table class="table" align="center">
+		<input type="hidden" id="exisuser" value="${exisuser }"></input>
 		<tr style="background: #66CCFF;height: 120px;">
 			<td colspan="2" align="center">
 				<iframe frameborder="0" width="120" src="${path}/index/toTop.do" name="top"></iframe>

@@ -32,12 +32,12 @@
 		</style>
 	</head>
 	<body>
-		
+	
 		<div bgcolor="" align="left" >
-			<a href="${path}/share/myListShare.do">我的分享</a>
+			<a href="${path}/share/myListShare.do?userid=${sessionScope.exisuser.userid}">我的分享</a>
 		</div>
 		<div bgcolor="" align="left" >
-			<a href="">我的藏书</a>
+			<a href="${path}/Colltrade/myCollTrade.do">我的藏书</a>
 		</div>
 		
 	</body>

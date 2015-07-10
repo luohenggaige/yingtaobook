@@ -10,7 +10,7 @@ import cn.tushu.service.BookService;
 @Controller
 @RequestMapping("/book")
 public class BookController {
-	
+	 
 	@Autowired
 	BookService bookService;
 	

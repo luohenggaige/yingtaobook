@@ -30,14 +30,38 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
-	@RequestMapping("/toRegister.do")
-	public String toRegister(){
-		return "index/reg";
-	}
-	
 	@RequestMapping("/toLogin.do")
 	public String toLogin(){
 		return "index/login";
+	}
+	
+	@RequestMapping("/login.do")
+	public String login(String username,String password,String piccodeImage,HttpSession session,Model model){
+		Map<String,Object> map = new HashMap<String,Object>();
+		map.put("username", username);
+		map.put("password", password);
+//		User user = userService.selectLogin(map);
+		User user = new User();
+		user.setUsername(username);
+		String tip = "";
+		if(user == null){
+			tip = "userOrPassError";
+			model.addAttribute("tip", tip);
+			return "redirect:login.do";
+		}
+		String piccode = (String) session.getAttribute("piccode");
+		if(piccodeImage != null && piccodeImage != null && !piccode.equalsIgnoreCase(piccodeImage)){
+			model.addAttribute("tip", "picError");
+			return "redirect:login.do";
+		}
+//		session.setAttribute("exisuser", user);
+//		return "redirect:/index/toIndex.do";
+		return "index/index";
+	}
+	
+	@RequestMapping("/toRegister.do")
+	public String toRegister(){
+		return "index/reg";
 	}
 	
 	@RequestMapping("/register.do")
@@ -79,22 +103,6 @@ public class UserController {
         String piccode = sb.toString();
         System.out.println("piccode="+piccode);
         ImageIO.write(img, "JPG", response.getOutputStream());  
-	}
-	
-	@RequestMapping("/login.do")
-	public String login(String username,String password,String piccodeImage,HttpSession session,Model model){
-		Map<String,Object> map = new HashMap<String,Object>();
-		map.put("username", username);
-		map.put("password", password);
-		User user = userService.selectLogin(map);
-		String tip = "";
-		if(user == null){
-			tip = "userOrPassError";
-			model.addAttribute("tip", tip);
-			return "index/login";
-		}
-		session.setAttribute("user", user);
-		return "index/index";
 	}
 	
 	@RequestMapping("/findByUserName.do")

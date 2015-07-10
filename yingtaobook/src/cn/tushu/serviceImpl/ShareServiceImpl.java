@@ -33,8 +33,8 @@ public class ShareServiceImpl implements ShareService {
 	}
 
 	@Override
-	public List<Share> selectByAll() {
-		return ShareDao.selectByAll();
+	public List<Share> selectByAll(Map<String, Object> map) {
+		return ShareDao.selectByAll(map);
 	}
 
 	@Override
@@ -43,18 +43,14 @@ public class ShareServiceImpl implements ShareService {
 	}
 
 	@Override
-	public List<Share> selectByAllHeat() {
-		return ShareDao.selectByAllHeat();
+	public List<Share> SelectAllShare() {
+		return ShareDao.SelectAllShare();
 	}
 
-	@Override
-	public List<Share> CateSelectAllDate(Map<String, Object> map) {
-		return ShareDao.CateSelectAllDate(map);
-	}
 
 	@Override
-	public List<Share> CateSelectAllHeat(Map<String, Object> map) {
-		return ShareDao.CateSelectAllHeat(map);
+	public List<Share> selectByCondition(Map<String, Object> map) {
+		return ShareDao.selectByCondition(map);
 	}
 	
 	

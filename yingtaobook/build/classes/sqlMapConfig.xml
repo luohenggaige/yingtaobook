@@ -11,6 +11,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="sql/mapper/UserMapper.xml"/>
 		<mapper resource="sql/mapper/BookMapper.xml"/>
 		<mapper resource="sql/mapper/ShareMapper.xml"/>
+		<mapper resource="sql/mapper/CategoryMapper.xml"/>
 	</mappers>
 
 </configuration>

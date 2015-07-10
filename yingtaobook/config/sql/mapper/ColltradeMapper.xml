@@ -165,4 +165,16 @@
       imgsize = #{imgsize,jdbcType=VARCHAR}
     where collid = #{collid,jdbcType=INTEGER}
   </update>
+  
+  <select id="selectByAll" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from colltrade
+  	<where>
+  		<if test="userid != null">
+  			userid = #{userid}
+  		</if>
+  	</where>
+  </select>
+  
 </mapper>

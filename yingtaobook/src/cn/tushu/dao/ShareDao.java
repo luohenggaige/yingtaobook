@@ -11,9 +11,8 @@ public interface ShareDao {
 	public void insert(Share Share);
 	public void deleteById(Integer ShareId);
 	public void updateById(Integer ShareId);
-	public List<Share> selectByAll();
+	public List<Share> selectByAll(Map<String, Object> map);
 	public Share selectById(Integer ShareId);
-	public List<Share> selectByAllHeat();
-	public List<Share> CateSelectAllDate(Map<String, Object> map);
-	public List<Share> CateSelectAllHeat(Map<String, Object> map);
+	public List<Share> SelectAllShare();
+	public List<Share> selectByCondition(Map<String, Object> map);
 }

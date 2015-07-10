@@ -175,34 +175,44 @@
     where shareId = #{shareid,jdbcType=INTEGER}
   </update>
   
-  <select id="selectByAll" resultMap="BaseResultMap">
+  <select id="selectByAll" resultMap="BaseResultMap" parameterType="map">
   	select 
   	<include refid="Base_Column_List" />
   	from share
+  	<if test="userid != null">
+  		where userid = #{userid}
+  	</if>
   	ORDER BY DATE desc
   </select>
   
-  <select id="selectByAllHeat" resultMap="BaseResultMap">
+  <select id="SelectAllShare" resultMap="BaseResultMap">
   	select 
   	<include refid="Base_Column_List" />
   	from share
-  	ORDER BY heat desc
-  </select>
-  
-  <select id="CateSelectAllDate" resultMap="BaseResultMap" parameterType="map" >
-  	select 
-  	<include refid="Base_Column_List" />
-  	from share
-  	WHERE cid = #{cid}
 	ORDER BY DATE DESC 
   </select>
   
-  <select id="CateSelectAllHeat" resultMap="BaseResultMap" parameterType="map" >
+  <select id="selectByCondition" resultMap="BaseResultMap" parameterType="map" >
   	select 
   	<include refid="Base_Column_List" />
   	from share
-  	WHERE cid = #{cid}
-	ORDER BY heat DESC 
+  	<where>
+	  	<if test="cid != null">
+	  		cid = #{cid}
+	  	</if>
+	  	<if test="bookname != null">
+	  		and bookname like '%${bookname}%'
+	  	</if>
+		<if test="author != null">
+			and author like '%${author}%'
+		</if>
+	</where>
+	<if test="orderid == 1"><!-- 时间排序 -->
+		ORDER BY date DESC
+	</if>
+	<if test="orderid == 2"><!-- 热度排序 -->
+		ORDER BY heat DESC
+	</if>
   </select>
   
 </mapper>

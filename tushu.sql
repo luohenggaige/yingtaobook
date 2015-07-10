@@ -16,6 +16,26 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`tushu` /*!40100 DEFAULT CHARACTER SET u
 
 USE `tushu`;
 
+/*Table structure for table `adminuser` */
+
+DROP TABLE IF EXISTS `adminuser`;
+
+CREATE TABLE `adminuser` (
+  `adminuid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` char(20) DEFAULT NULL,
+  `password` char(20) DEFAULT NULL,
+  `dender` int(1) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `registime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `state` int(1) DEFAULT NULL,
+  `rid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`adminuid`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `adminuser` */
+
+insert  into `adminuser`(`adminuid`,`username`,`password`,`dender`,`birthday`,`registime`,`state`,`rid`) values (1,'123','123',NULL,NULL,'2015-07-06 16:52:45',NULL,1),(2,'321','321',NULL,NULL,'2015-07-06 16:52:52',NULL,2);
+
 /*Table structure for table `book` */
 
 DROP TABLE IF EXISTS `book`;
@@ -42,11 +62,11 @@ CREATE TABLE `category` (
   `cid` int(11) NOT NULL AUTO_INCREMENT,
   `cname` char(50) DEFAULT NULL,
   PRIMARY KEY (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `category` */
 
-insert  into `category`(`cid`,`cname`) values (1,'文学类'),(2,'小说类');
+insert  into `category`(`cid`,`cname`) values (1,'文学类'),(2,'小说类'),(3,'悬疑类');
 
 /*Table structure for table `colltrade` */
 
@@ -87,7 +107,7 @@ CREATE TABLE `share` (
 
 /*Data for the table `share` */
 
-insert  into `share`(`shareId`,`userId`,`bookName`,`author`,`reason`,`imgSize`,`cid`,`date`,`heat`) values (5,NULL,'你我','你我','你我','upload/20150615100253275851.jpg',1,'2015-06-15 14:36:30',62),(6,NULL,'java_jy','java_jy','java_jy','upload/20150615101440540673.jpg',1,'2015-06-15 14:36:30',27),(7,NULL,'hibernate','hibernate','hibernate','upload/20150615104446872583.jpg',1,'2015-06-15 14:36:31',48),(8,NULL,'java_head','java_head','java_head','upload/20150615104525393825.jpg',2,'2015-06-15 14:36:32',138),(9,NULL,'java编程思想','java编程思想','java编程思想','upload/20150615104545087300.jpg',2,'2015-06-15 14:36:33',52),(10,NULL,'spring','spring','spring','upload/20150615104620903124.jpg',2,'2015-06-15 14:36:36',23);
+insert  into `share`(`shareId`,`userId`,`bookName`,`author`,`reason`,`imgSize`,`cid`,`date`,`heat`) values (5,39,'你我','你我','你我','upload/20150615100253275851.jpg',1,'2015-07-01 01:33:56',62),(6,39,'java_jy','java_jy','java_jy','upload/20150615101440540673.jpg',1,'2015-07-01 01:33:57',27),(7,39,'hibernate','hibernate','hibernate','upload/20150615104446872583.jpg',1,'2015-07-01 01:34:00',48),(8,1,'java_head','java_head','java_head','upload/20150615104525393825.jpg',2,'2015-07-01 00:56:43',138),(9,NULL,'java编程思想','java编程思想','java编程思想','upload/20150615104545087300.jpg',2,'2015-06-15 14:36:33',52),(10,NULL,'spring','spring','spring','upload/20150615104620903124.jpg',2,'2015-06-15 14:36:36',23);
 
 /*Table structure for table `user` */
 
@@ -102,11 +122,11 @@ CREATE TABLE `user` (
   `manage` int(1) DEFAULT NULL,
   `state` int(1) DEFAULT NULL,
   PRIMARY KEY (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 
-insert  into `user`(`userid`,`username`,`password`,`gender`,`birthday`,`manage`,`state`) values (39,'luosong222','123',NULL,NULL,NULL,NULL);
+insert  into `user`(`userid`,`username`,`password`,`gender`,`birthday`,`manage`,`state`) values (39,'luosong33','123',NULL,NULL,NULL,NULL),(40,NULL,NULL,NULL,NULL,NULL,NULL),(41,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

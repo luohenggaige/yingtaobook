@@ -37,23 +37,12 @@ public class IndexController {
 	
 	@RequestMapping("/toBody.do")
 	public String toBody(Model model){
-		List<Share> list = shareService.selectByAll();
+		List<Share> list = shareService.SelectAllShare();
 		model.addAttribute("shareList", list);
-		List<Share> heatList = shareService.selectByAllHeat();
-		model.addAttribute("heatList", heatList);
 		return "index/body";
 		
 		
 	}
 	
-	@RequestMapping("/toAdminIndex.do")
-	public String toAdminIndex(){
-		return "adminjsp/adminIndex";
-	}
-	
-	@RequestMapping("/toAdminTop.do")
-	public String toAdminTop(){
-		return "adminjsp/adminTop";
-	}
 	
 }

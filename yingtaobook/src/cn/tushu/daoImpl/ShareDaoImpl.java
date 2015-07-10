@@ -30,8 +30,8 @@ public class ShareDaoImpl extends SqlSessionDaoSupport implements ShareDao {
 	}
 
 	@Override
-	public List<Share> selectByAll() {
-		return this.getSqlSession().selectList(sn+"selectByAll");
+	public List<Share> selectByAll(Map<String, Object> map) {
+		return this.getSqlSession().selectList(sn+"selectByAll",map);
 	}
 
 	@Override
@@ -40,18 +40,14 @@ public class ShareDaoImpl extends SqlSessionDaoSupport implements ShareDao {
 	}
 
 	@Override
-	public List<Share> selectByAllHeat() {
-		return this.getSqlSession().selectList(sn+"selectByAllHeat");
+	public List<Share> SelectAllShare() {
+		return this.getSqlSession().selectList(sn+"SelectAllShare");
 	}
 
-	@Override
-	public List<Share> CateSelectAllDate(Map<String, Object> map) {
-		return this.getSqlSession().selectList(sn+"CateSelectAllDate",map);
-	}
 
 	@Override
-	public List<Share> CateSelectAllHeat(Map<String, Object> map) {
-		return this.getSqlSession().selectList(sn+"CateSelectAllHeat",map);
+	public List<Share> selectByCondition(Map<String, Object> map) {
+		return this.getSqlSession().selectList(sn+"selectByCondition",map);
 	}
 
 }

@@ -45,6 +45,10 @@ function submitUpload(){
 		图书作者：<input type="text" id="author" name="author" ></input><br/>
 		分享理由：<input type="text" id="reason" name="reason" ></input><br/>
 		图书分类：<select style="width: 150px; height: 20px;" name="cid">
+					<option href="#" fType="cid" fValue="">全部</option>
+					<c:forEach items="${cateList }" var="cate">
+						<option href="#" fType="cid" fValue="${cate.cid }">${cate.cname }</option>
+					</c:forEach>
     			</select><br/>
 		<input type="submit" id="submit11" name="submit11" value="保存"></input>
 	</form>

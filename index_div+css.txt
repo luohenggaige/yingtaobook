@@ -1,0 +1,92 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="taglibs.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+	.ul_two li {/* li的不换行方式。float: left;没有 display:inline;好用，因为li会在ul外面    */
+			float: left;/* div默认一行只显示一个，Float属性可以实现一行显示多个div的功能，最常实现表格的多列布局（左右布局） */
+			width: 100px;
+			margin: 0px 20px 10px 0px;/* 四个外边距：从上外边距开始顺时针旋转 */
+			background-color: #ccd;/* 背景颜色 */
+			overflow: hidden;/* 去掉圆点 */
+			line-height:1.6em;/* li的高度 */
+			display:block;/* 边框线 */
+		 	border:1px solid red;/* 边框线 */
+		 	text-decoration:none;/* 下划线 */
+		}
+	.ul_three li{
+			display:inline;
+			margin: 0px 20px 10px 0px;
+			text-decoration:none;
+			list-style:none;
+			overflow: hidden;
+		}
+	.ul_lr li{
+			margin: 0px 20px 10px 0px;
+			text-decoration:none;
+			list-style:none;
+			overflow: hidden;
+		}
+	a{
+		text-decoration:none;
+		}
+	#wrap{  
+       width:1000px;   
+       margin:0 auto;   
+       clear:both;       
+	}
+	.div_right{
+		 with:300px;
+		 height:500px;
+		 border:1px solid red;
+		 float:right;
+		 align:center;
+		 margin:20px;/*设置元素跟其他元素的距离为20像素*/
+		}
+	.div_left{
+		with:700px;
+		height:500px;
+		border:1px solid red;
+		float:right;
+		margin:20px;/*设置元素跟其他元素的距离为20像素*/
+		}
+	.clear {
+		clear:both;
+		}  
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="wrap">
+		<div height="100px" style="display: block;border:1px solid red;">
+			<ul class="ul_three" id="master" height="100px" align="right">
+				<li><a href="">好书分享</a></li>
+				<li><a href="">藏书交易</a></li>
+				<li id=""><a href="">首页</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+			
+		<div class="div_right">
+			<ul class="ul_lr" id="" height="100px">
+				<li overflow="hidden"><a href="${path}/user/toLogin.do">登录1231111111111111111111111111111</a></li>
+				<li overflow="hidden"><a href="${path}/user/toRegister.do">注册</a><br></li>
+				<li overflow="hidden"><a href="" style="text-decoration:none">首页</a></li>
+			</ul>
+		</div>
+		<div class="div_left">
+			<ul class="ul_lr" id="" height="100px">
+				<li overflow="hidden"><a href="${path}/user/toLogin.do">登录1231111111111111111111111111111</a></li>
+				<li overflow="hidden"><a href="${path}/user/toRegister.do">注册123</a><br></li>
+				<li overflow="hidden"><a href="" style="text-decoration:none">首页123</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+			
+			<%-- <a href="${path}/book/toBookList.do">图书管理</a><br>
+			<a href="${path}/order/toPay.do">项目投资</a><br> --%>
+	</div>
+</body>
+</html>
