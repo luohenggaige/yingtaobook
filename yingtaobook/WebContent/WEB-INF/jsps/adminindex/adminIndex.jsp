@@ -9,24 +9,14 @@
 	*{
 			font-size:10pt;
 		}
-	body{
-		text-align:center;
-	}
-	.table{
-		width:90%;
-		height:100%;
-		border:1px solid gray;/*固定边框,1像素*/
-	    border-collapse: collapse;/*单线的列表边框*/
-	}
-	.table td{
-		border:1px solid gray;/*固定边框,1像素*/
-	}
-	iframe {
-		width: 100%;
-		height: 100%;
-	}
 	.clear {
 		clear: both;
+	}
+	.ul_dh{
+		width:100%;height:40px;border:1px solid yellow;
+	}
+	.ul_li_s{
+		float:left;padding: 0 6px;line-height: 40px;border:1px solid gray;
 	}
 		
 </style>
@@ -47,10 +37,10 @@ $(function(){
 		</div>
 		<div class="clear"></div>
 		<div style="width:100%;height:40px;align:center;border:1px solid gray;">
-			<!-- <div style="width:100%;height:30px;border:1px solid yellow;"></div> -->
-			<ul style="width:100%;height:40px;border:1px solid yellow;">
-				<li style="float:left;padding: 0 6px;line-height: 40px;border:1px solid gray;"><a>首页</a></li>
-				<li style="float:left;padding: 0 6px;line-height: 40px;border:1px solid gray;"><a>用户管理</a></li>
+			<div style="width:100%;height:30px;border:1px solid yellow;"></div>
+			<ul class="ul_dh">
+				<li class="ul_li_s"><a>首页</a></li>
+				<li class="ul_li_s"><a>用户管理</a></li>
 			</ul>
 		</div>
 	
