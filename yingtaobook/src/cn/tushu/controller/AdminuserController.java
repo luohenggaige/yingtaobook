@@ -18,7 +18,7 @@ import cn.tushu.service.CategoryService;
 import cn.tushu.service.AdminuserService;
 
 @Controller
-@RequestMapping("/adminIndex")
+@RequestMapping("/adminUser")
 public class AdminuserController {
 	
 	@Autowired
@@ -28,8 +28,18 @@ public class AdminuserController {
 	public String list(Model model){
 		List<Adminuser> list = adminuserService.SelectAllAdminuser();
 		model.addAttribute("list", list);
-		return "adminuser/list";
+		return "adminuser/listAdminUser";
 	}
 	
+	@RequestMapping("/toAdd.do")
+	public String toAdd(Model model){
+		return "adminuser/add";
+	}
+	
+	@RequestMapping("/add.do")
+	public String add(Model model,Adminuser adminuser){
+		adminuserService.insert(adminuser);
+		return "redirect:list.do";
+	}
 	
 }

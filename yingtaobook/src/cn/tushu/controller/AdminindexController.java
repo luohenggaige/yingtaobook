@@ -27,9 +27,9 @@ public class AdminindexController {
 	@RequestMapping("/adminIndex.do")
 	public String toAdminIndex(HttpSession session){
 		Adminuser adminuser = new Adminuser();
-		adminuser.setRid(1);
 		session.setAttribute("exisAdminuser", adminuser);
-		return "adminindex/adminIndex";
+		return "";
+//		return "adminindex/adminIndexC";
 	}
 	
 	@RequestMapping("/adminTop.do")

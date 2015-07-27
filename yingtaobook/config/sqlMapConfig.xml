@@ -12,6 +12,11 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="sql/mapper/BookMapper.xml"/>
 		<mapper resource="sql/mapper/ShareMapper.xml"/>
 		<mapper resource="sql/mapper/CategoryMapper.xml"/>
+		<mapper resource="sql/mapper/AdminuserMapper.xml"/>
+		<mapper resource="sql/mapper/AuRoleMapper.xml"/>
+		<mapper resource="sql/mapper/RoleMapper.xml"/>
+		<mapper resource="sql/mapper/RoleJuriMapper.xml"/>
+		<mapper resource="sql/mapper/JurisdictMapper.xml"/>
 	</mappers>
 
 </configuration>

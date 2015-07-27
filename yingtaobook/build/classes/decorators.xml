@@ -1,9 +1,0 @@
-<decorators defaultdir="/yingtaobook/config/decorators">
-    <excludes>
-        <pattern>*/top10.jsp</pattern>
-        
-    </excludes> 
-    <decorator name="default" page="default.jsp">
-        <pattern>/.do</pattern>
-    </decorator>
-</decorators>
