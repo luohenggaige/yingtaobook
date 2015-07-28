@@ -32,8 +32,8 @@ public class RoleController {
 	public String listRole(Model model){
 		List<Role> list = roleService.SelectAllRole();
 		model.addAttribute("listRole", list);
-//		return "role/listRole";
-		return "adminindex/adminIndexC";
+		return "role/listRole";
+//		return "adminindex/adminIndexC";
 	}
 	
 	@RequestMapping("/toEditRoleJuri.do")

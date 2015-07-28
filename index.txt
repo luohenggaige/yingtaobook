@@ -1,0 +1,171 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../common/taglibs.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+			font-size:10pt;
+		}
+	body{
+		text-align:center;
+	}
+	.table{
+		width:90%;
+		height:100%;
+		border:1px solid gray;/*：边框宽度 	类型		颜色*/
+	    border-collapse: collapse;/*单线的列表边框*/
+	}
+	.table td{
+		border:1px solid gray;/*固定边框,1像素*/
+	}
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<script type="text/javascript" src="<c:url value='/res/js/jquery-1.8.3.js'/>"></script>
+<script type="text/javascript">
+$(function(){
+	var exisuser = $("#exisuser").val();
+	if(exisuser == "" || exisuser == null){
+		//alert($("#exisuser").val());
+		//$("#exisuser").attr("value","y");
+		//window.location.reload();//刷新当前页面.
+		//$("#exisuser").val("y");
+		//alert($("#exisuser").val());
+	}
+	//alert("123"+$("#exisuser").val());
+});
+
+
+</script>
+</head>
+<body>
+	<table class="table" align="center">
+		<input type="hidden" id="exisuser" value="${exisuser }"></input>
+		<tr style="background: #66CCFF;height: 120px;">
+			<td colspan="2" align="center">
+				<iframe frameborder="0" width="120" src="${path}/index/toTop.do" name="top"></iframe>
+			</td>
+		</tr>
+			
+		<tr>
+			<td width="86%" align="center">
+				<iframe frameborder="0" src="${path}/index/toBody.do" name="body"></iframe>
+			</td>
+			<td style="padding:5px;" align="center" valign="top"><!-- valign规定单元格中内容的垂直排列方式 -->
+				<iframe frameborder="0" src="${path}/index/toRight.do" name="right"></iframe>
+			</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
+
+
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../common/taglibs.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+<base target="body"/>
+<style>
+	div_top{
+		font-size: 10pt;/* 字体在样式中定义无效，在属性中定义有效 */
+	}
+	a{
+		text-transform:none;
+		text-decoration:none;
+		float: right;
+		margin: 0px 20px 0px 0px;/* 四个外边距：从上外边距开始顺时针旋转 */
+	}
+	a:hover {/* a:hover指的是鼠标经过它时候的效果 */
+		text-decoration:underline;/* underline定义文本下的一条线。 */
+	}
+	#ic:hover{
+		color:#f60;
+		text-decoration:none;
+	}
+	
+</style>
+<script type="text/javascript" src="<c:url value='/res/js/jquery-1.8.3.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/res/js/jquery.form.js'/>"></script>
+<script type="text/javascript">
+
+$(function(){
+	$("a#ic").mouseover(function(){
+		alert("jiaodian");
+	});	
+});
+
+</script>
+</head>
+
+<body>
+	<h1 style="text-align: center;">樱桃图书社区</h1>
+	<div height="48px" style="font-size: 11pt;">
+		<a href="${path}/index/toBody.do">首页</a>
+		<a href="${path}/Colltrade/CollTradeList.do">藏书交易</a>
+		<a href="${path }/share/SelectAllShare.do">好书分享</a>
+		<c:if test="${empty exisuser}">
+			<a href="${path }/user/toLogin.do"  target="_top">登录</a>
+			<a href="${path }/user//toRegister.do"  target="_top">注册</a>
+		</c:if>
+		<c:if test="${not empty exisuser}">
+			<a id="ic" style="float:right;margin: 0px 20px 0px 0px;" href="#">${exisuser.username }</a>
+		</c:if>
+	</div>
+	
+</body>
+</html>
+
+
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../common/taglibs.jsp"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+	<head>
+		<title>Insert title here</title>
+		<base target="body"/>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<style>
+		
+			a{
+				align:right;
+				text-transform:none;
+				text-decoration:none;
+				margin: 0px 0px 20px 20px;/* 四个外边距：从上外边距开始顺时针旋转 */
+			}
+			a:hover {/* a:hover指的是鼠标经过它时候的效果 */
+				text-decoration:underline;/* underline定义文本下的一条线。 */
+			}
+			div_right{
+				font-size: 10pt;/* 字体在样式中定义无效，在属性中定义有效 */
+			}
+			div {
+					background: #87CEFA; 
+					margin: 3px; 
+					padding: 3px;
+					font-size:11pt;
+				}
+		
+		</style>
+	</head>
+	<body>
+	
+		<div bgcolor="" align="left" >
+			<a href="${path}/share/myListShare.do?userid=${sessionScope.exisuser.userid}">我的分享</a>
+		</div>
+		<div bgcolor="" align="left" >
+			<a href="${path}/Colltrade/myCollTrade.do">我的藏书</a>
+		</div>
+		
+	</body>
+</html>

@@ -30,10 +30,10 @@ body{ text-align:center;}
 </div>
 <div id="navi">
 <ul>
-　<li><a href="#">首页</a></li>
-<li><a href="#">日志</a></li>
-<li><a href="#">相片</a></li>
-<li><a href="#">关于自己</a></li>
+	<li><a href="#">首页</a></li>
+	<li><a href="#">日志</a></li>
+	<li><a href="#">相片</a></li>
+	<li><a href="#">关于自己</a></li>
 </ul>
 </div>
 <div id="content">
