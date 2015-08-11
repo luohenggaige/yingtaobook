@@ -21,7 +21,7 @@
 	.clear {
 	 	clear: both;
 	 }
-	.div_list{width:140px;height:170px;border:solid 2px gray;
+	.div_book{width:140px;height:170px;border:solid 2px gray;
 		margin-top:20px;margin-right:30px;text-align:center;text-indent:-18px;
 		float:right;}
 	.div_fxyq{float:right;margin-top:20px;margin-right:45px;}
@@ -36,7 +36,7 @@
 	<div class="clear"></div>
 	<div style="">
 		<c:forEach items="${shareList }" var="share">
-			<div class="div_list">
+			<div class="div_book">
 				<a href=""><img src="${path }/${share.imgsize }"></a><br>
 				<a href="" style="text-indent:-18px;align:center;">${share.bookname }</a>
 			</div>
@@ -50,7 +50,7 @@
 	<div class="clear"></div>
 	<div>
 		<c:forEach items="${heatList }" var="heat">
-			<div class="div_list">
+			<div class="div_book">
 				<a href=""><img src="${path }/${heat.imgsize }"></a><br>
 				<a href="" style="text-indent:-18px;align:center;">${heat.bookname }</a>
 			</div>
