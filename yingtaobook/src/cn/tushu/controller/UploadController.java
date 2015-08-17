@@ -51,6 +51,7 @@ public class UploadController {
 		
 		//获取路径，写入图片字节文件。在此用webservice在不同系统（主机）间交互通信
 		String filePath = request.getSession().getServletContext().getRealPath("/")+"/upload/"+fileName;//图片服务器上的绝对路径
+		System.out.println("filePath="+filePath);
 //		Client client = Client.create();
 //		WebResource wr = client.resource(filePath);
 //		wr.put(String.class, bfile);

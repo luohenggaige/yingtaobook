@@ -21,7 +21,9 @@ public class IndexController {
 	ShareService shareService;
 	
 	@RequestMapping("/toIndex.do")
-	public String toIndex(){
+	public String toIndex(Model model){
+		List<Share> shareList = shareService.SelectAllShare();
+		model.addAttribute("shareList", shareList);
 		return "index/index";
 	}
 	
