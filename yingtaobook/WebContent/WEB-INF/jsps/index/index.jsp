@@ -36,7 +36,9 @@
 <script type="text/javascript" src="<c:url value='/res/js/jquery-1.8.3.js'/>"></script>
 <script type="text/javascript">
 
-
+$(function(){
+	
+});
 
 </script>
 </head>
