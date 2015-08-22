@@ -14,4 +14,5 @@ public interface UserDao {
 	public User selectById(Integer userId);
 	public User selectLogin(Map<String,Object> map);
 	public List<User> findByUserName (Map<String,Object> map);
+	public org.springframework.security.core.userdetails.User selectByUsername (String username);
 }

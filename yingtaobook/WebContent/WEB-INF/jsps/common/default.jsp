@@ -14,7 +14,9 @@
 </head>
 <body>
 
-<div <decorator:getProperty property="body.id" writeEntireProperty="true"/> <decorator:getProperty property="body.class" writeEntireProperty="true"/>>
+<div <decorator:getProperty property="body.id" writeEntireProperty="true"/> 
+	<decorator:getProperty property="body.class" writeEntireProperty="true"/>>
+	
 	<jsp:include page="/WEB-INF/jsps/index/top.jsp"/>
 </div>
 

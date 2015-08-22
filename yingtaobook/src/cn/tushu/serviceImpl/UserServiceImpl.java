@@ -51,4 +51,9 @@ public class UserServiceImpl implements UserService {
 		return userDao.findByUserName(map);
 	}
 
+	@Override
+	public org.springframework.security.core.userdetails.User selectByUsername(String username) {
+		return userDao.selectByUsername(username);
+	}
+
 }

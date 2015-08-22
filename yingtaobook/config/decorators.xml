@@ -1,8 +1,11 @@
 <decorators defaultdir="/yingtaobook/config/decorators">
+
+	<!-- excludes结点则指定了哪些路径的请求不使用任何模板 -->
     <excludes>
         <pattern>*/top10.jsp</pattern>
-        
     </excludes> 
+    
+    <!-- decorator结点指定了模板的位置和文件名，通过pattern来指定哪些路径引用哪个模板 -->
     <decorator name="default" page="default.jsp">
         <pattern>/.do</pattern>
     </decorator>

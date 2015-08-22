@@ -154,4 +154,11 @@
   	SELECT * FROM USER WHERE username = #{userName}
   </select>
   
+  <select id="selectByUsername" parameterType="string" resultMap="BaseResultMap">
+  	select
+  	<include refid="Base_Column_List" />
+  	from user
+  	where username = #{userName}
+  </select>
+  
 </mapper>

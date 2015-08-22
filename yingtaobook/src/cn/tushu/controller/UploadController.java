@@ -19,8 +19,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import cn.luosong.util.ECPS_Constants;
-import cn.luosong.util.UploadResponse;
+import cn.tushu.util.ECPS_Constants;
+import cn.tushu.util.UploadResponse;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;

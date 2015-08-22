@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import Union.JnkyServer;
-import cn.luosong.util.Util;
+import cn.tushu.util.Util;
 
 @Controller
 @RequestMapping("/httpClient")

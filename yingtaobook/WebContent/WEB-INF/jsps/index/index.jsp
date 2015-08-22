@@ -49,10 +49,17 @@ $(function(){
 	</div>
 	<div id="navi">
 		<ul>
-			<li style="padding-right:50px;"><a href="#"></a></li>
+			<li style="padding-right:50px;border:0px solid;"><a href="#"></a></li>
 			<li><a href="${path}/index/toBody.do">首页</a></li>
 			<li><a href="${path}/Colltrade/CollTradeList.do">藏书交易</a></li>
 			<li><a href="${path }/share/SelectAllShare.do">好书分享</a></li>
+			<c:if test="${empty exisuser}">
+				<li><a href="${path }/user/toLogin.do" >登录</a></li>
+				<li><a href="${path }/user/toRegister.do" >注册</a></li>
+			</c:if>
+			<c:if test="${not empty exisuser}">
+				<li><a id="ic" style="float:right;margin: 0px 20px 0px 0px;" href="#">${exisuser.username }</a></li>
+			</c:if>
 		</ul>
 	</div>
 	<div id="navi_right">

@@ -45,4 +45,9 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 		return this.getSqlSession().selectList(sn+"findByUserName", map);
 	}
 
+	@Override
+	public org.springframework.security.core.userdetails.User selectByUsername(String username) {
+		return (org.springframework.security.core.userdetails.User) this.getSqlSession().selectOne(sn+"selectByUsername", username);
+	}
+
 }
