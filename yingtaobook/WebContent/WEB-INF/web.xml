@@ -40,17 +40,18 @@
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:beans.xml</param-value>
+		<param-value>classpath:beans.xml
+		classpath:securityConfig.xml</param-value>
 	</context-param>
 	
 	<!-- Spring Secutiry3.1的过滤器链配置 -->
+	<!-- <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:securityConfig.xml</param-value>
+	</context-param> -->
 	<filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-        <!-- <init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:securityConfig.xml</param-value>
-		</init-param> -->
     </filter>
     <filter-mapping>
         <filter-name>springSecurityFilterChain</filter-name>
