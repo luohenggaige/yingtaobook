@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import cn.tushu.model.Colltrade;
 import cn.tushu.service.ColltradeService;
 
+//藏书交易
 @Controller
 @RequestMapping("/Colltrade")
 public class CollController {
