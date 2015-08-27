@@ -33,6 +33,7 @@ public class RedisTest1 {
 		可以用JedisPool创建一些可靠Jedis实例，可以从池中拿到Jedis的实例。这种方式可以解决那些问题并且会实现高效的性能*/
 //		private static JedisPool pool = null;
 //		JedisPool pool1 = new JedisPool(new JedisPoolConfig(), "localhost");/
+//		jedis.rpush(key, strings)
 	}
 	
 }

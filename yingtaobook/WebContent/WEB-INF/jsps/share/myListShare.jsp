@@ -32,6 +32,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<header>header</header>
+       demo.html的title将被填充到这儿：
+       <sitemesh:write property='title' /><br />
+       demo.html的body将被填充到这儿：
+       <sitemesh:write property='body' />
+       <hr />
 	<div>
 		<div style="float:right;">
 			<a class="a_tf" href="${path }/share/toAddShare.do">添加分享</a>
